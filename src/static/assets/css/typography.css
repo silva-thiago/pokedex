@@ -1,0 +1,12 @@
+@font-face {
+  font-family: "Roboto", sans-serif;
+  src: url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+}
+.fa-solid::before,
+.fa-solid::after,
+.fa-brands::before,
+.fa-brands::after {
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}/*# sourceMappingURL=typography.css.map */

@@ -1,0 +1,21 @@
+@mixin for-size($range) {
+	$sm: 576px;
+	$md: 768px;
+	$lg: 992px;
+	$xl: 1200px;
+	$xxl: 1400px;
+
+	@if $range == xs {
+		@media (max-width: #{$sm - 1}) { @content; }
+	} @else if $range == sm {
+		@media (min-width: $sm) { @content; }
+	} @else if $range == md {
+		@media (min-width: $md) { @content; }
+	} @else if $range == lg {
+		@media (min-width: $lg) { @content; }
+	} @else if $range == xl {
+		@media (min-width: $xl) { @content; }
+	} @else if $range == xxl {
+		@media (min-width: $xxl) { @content; }
+	}
+}

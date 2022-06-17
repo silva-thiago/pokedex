@@ -1,0 +1,43 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.app {
+	display: grid;
+	grid-template-rows: 1fr auto 1fr;
+	place-items: center;
+}
+
+.header,
+.footer {
+	padding: 1rem;
+	width: 100%;
+}
+
+.header {
+	margin-bottom: 1rem;
+}
+
+.footer {
+	margin-top: auto;
+}
+
+.container {
+	width: 100%;
+
+	@include for-size(sm) { max-width: 540px; }
+	@include for-size(md) { max-width: 720px; }
+	@include for-size(lg) { max-width: 960px; }
+	@include for-size(xl) { max-width: 1140px; }
+	@include for-size(xxl) { max-width: 1320px; }
+}
+
+.pokedex {
+	display: grid;
+	grid-gap: 1rem;
+	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
