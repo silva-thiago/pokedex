@@ -12,12 +12,21 @@ const fetchPokemon = () => {
       const sprites = Object.create(pokemon.sprites.other.dream_world)
 
       accumulator += `
-        <li class='pokemon ${types[0]}'>
-          <img class='pokemon-img' src='${sprites.front_default}' alt='${pokemon.name}' width='150px' height='150px'>
-          <h2 class='pokemon-name'>${pokemon.name}</h2>
-          <p class='pokemon-types'>${types.join(' | ')}</p>
-          <span class='pokemon-id'>#${pokemon.id}</span>
-        </li>`
+        <li class='card'>
+          <div class='card-header'>
+            <span class='pokemon-id'>#${pokemon.id}</span>
+            <h2 class='pokemon-name'>${pokemon.name}</h2>
+          </div>
+          <div class='card-content pokemon ${types[0]}'>
+            <div class='card-body'>
+              <img class='pokemon-img' src='${sprites.front_default}' alt='${pokemon.name}' width='192px' height='192px'>
+            </div>
+          </div>
+          <div class='card-footer'>
+            <p class='pokemon-types'>${types.join(' | ')}</p>
+          </div>
+        </li>
+      `
 
       return accumulator
     }, '')
