@@ -9,6 +9,7 @@
 html {
 	background-color: rgb(241 245 249);
 	scroll-behavior: smooth;
+	scroll-snap-type: both proximity;
 }
 
 a {
@@ -41,7 +42,7 @@ ul {
 }
 
 .container {
-	padding: 1rem;
+	padding: 1rem 4rem;
 	width: 100%;
 
 	@include for-size(sm) { max-width: 540px; }

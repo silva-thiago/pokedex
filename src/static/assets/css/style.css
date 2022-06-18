@@ -22,13 +22,18 @@
   place-items: center;
 }
 .pokedex .card {
-  background-color: rgb(207, 181, 59);
-  background-image: url("../img/texture.svg");
+  align-items: center;
+  background: rgb(208, 176, 121);
+  background: linear-gradient(45deg, rgb(208, 176, 121) 0%, rgb(241, 209, 140) 45%, rgb(236, 208, 170) 65%, rgb(221, 194, 139) 80%, rgb(223, 187, 117) 90%, rgb(235, 183, 87) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d0b079",endColorstr="#ebb757",GradientType=1);
   border-color: rgb(212, 175, 55);
   border-radius: 0.5rem;
   border-style: solid;
-  border-width: 1px;
+  border-width: 2px;
   box-shadow: 0 20px 25px -5px rgba(212, 175, 55, 0.5), 0 8px 10px -6px rgba(212, 175, 55, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   min-height: 25rem;
   padding: 1rem;
   width: 100%;
@@ -49,98 +54,91 @@
   font-weight: 700;
   line-height: 1rem;
 }
-.pokedex .card-content {
-  align-items: center;
-  border-radius: 0.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.pokedex .card-body {
   margin: 1rem 0;
-  outline-style: solid;
-  outline-offset: 4px;
-  outline-width: 2px;
-  padding: 1rem;
   width: 100%;
 }
-.pokedex .card-content .card-body::after {
-  background-image: linear-gradient(to right, #09f1b8, #00a2ff, #ff00d2, #fed90f);
-  border-radius: 100%;
-  display: block;
-  height: 50%;
-  left: 25%;
-  opacity: 0.75;
-  position: absolute;
-  top: 25%;
-  width: 50%;
+.pokedex .card-body .card-content {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
 }
-.pokedex .card-content .card-body .pokemon-img {
+.pokedex .card-body .card-content .pokemon-img {
+  align-items: center;
+  display: flex;
   filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1)) drop-shadow(0 1px 1px rgba(0, 0, 0, 0.06));
+  justify-content: center;
   position: relative;
   z-index: 2;
 }
-.pokedex .card .bug {
-  background-color: #f8d5a3;
-  outline-color: #f8d5a3;
+.pokedex .card-body .bug,
+.pokedex .card-body .dragon,
+.pokedex .card-body .electric,
+.pokedex .card-body .fairy,
+.pokedex .card-body .fighting,
+.pokedex .card-body .fire,
+.pokedex .card-body .flying,
+.pokedex .card-body .ghost,
+.pokedex .card-body .grass,
+.pokedex .card-body .ground,
+.pokedex .card-body .ice,
+.pokedex .card-body .normal,
+.pokedex .card-body .poison,
+.pokedex .card-body .psychic,
+.pokedex .card-body .rock,
+.pokedex .card-body .steel,
+.pokedex .card-body .water {
+  border-radius: 0.5rem;
 }
-.pokedex .card .dragon {
-  background-color: #97b3e6;
-  outline-color: #97b3e6;
+.pokedex .card-body .bug {
+  background: linear-gradient(90deg, rgb(252, 69, 106) 0%, rgb(63, 94, 251) 100%);
 }
-.pokedex .card .electric {
-  background-color: #FCF7DE;
-  outline-color: #FCF7DE;
+.pokedex .card-body .dragon {
+  background: linear-gradient(90deg, rgb(63, 94, 251) 0%, rgb(252, 70, 107) 100%);
 }
-.pokedex .card .fairy {
-  background-color: #fceaff;
-  outline-color: #fceaff;
+.pokedex .card-body .electric {
+  background: linear-gradient(90deg, rgb(253, 187, 45) 0%, rgb(34, 193, 195) 100%);
 }
-.pokedex .card .fighting {
-  background-color: #E6E0D4;
-  outline-color: #E6E0D4;
+.pokedex .card-body .fairy {
+  background: linear-gradient(90deg, rgb(239, 213, 255) 0%, rgb(81, 90, 218) 100%);
 }
-.pokedex .card .fire {
-  background-color: #FDDFDF;
-  outline-color: #FDDFDF;
+.pokedex .card-body .fighting {
+  background: linear-gradient(90deg, rgb(7, 0, 184) 0%, rgb(0, 255, 136) 100%);
 }
-.pokedex .card .flying {
-  background-color: #F5F5F5;
-  outline-color: #F5F5F5;
+.pokedex .card-body .fire {
+  background: linear-gradient(90deg, rgb(213, 51, 105) 0%, rgb(218, 174, 81) 100%);
 }
-.pokedex .card .ghost {
-  background-color: #bcbcbc;
-  outline-color: #bcbcbc;
+.pokedex .card-body .flying {
+  background: linear-gradient(90deg, rgb(28, 181, 224) 0%, rgb(0, 8, 81) 100%);
 }
-.pokedex .card .grass {
-  background-color: #DEFDE0;
-  outline-color: #DEFDE0;
+.pokedex .card-body .ghost {
+  background: linear-gradient(90deg, rgb(63, 43, 150) 0%, rgb(168, 192, 255) 100%);
 }
-.pokedex .card .ground {
-  background-color: #f4e7da;
-  outline-color: #f4e7da;
+.pokedex .card-body .grass {
+  background: linear-gradient(90deg, rgb(158, 189, 19) 0%, rgb(0, 133, 82) 100%);
 }
-.pokedex .card .ice, .pokedex .card .water {
-  background-color: #DEF3FD;
-  outline-color: #DEF3FD;
+.pokedex .card-body .ground {
+  background: linear-gradient(90deg, rgb(252, 255, 158) 0%, rgb(198, 119, 0) 100%);
 }
-.pokedex .card .normal {
-  background-color: #F5F5F5;
-  outline-color: #F5F5F5;
+.pokedex .card-body .ice {
+  background: linear-gradient(90deg, rgb(227, 255, 231) 0%, rgb(217, 231, 255) 100%);
 }
-.pokedex .card .poison {
-  background-color: #98d7a5;
-  outline-color: #98d7a5;
+.pokedex .card-body .normal {
+  background: linear-gradient(90deg, rgb(238, 174, 202) 0%, rgb(148, 187, 233) 100%);
 }
-.pokedex .card .psychic {
-  background-color: #eaeda1;
-  outline-color: #eaeda1;
+.pokedex .card-body .poison {
+  background: linear-gradient(90deg, rgb(0, 201, 255) 0%, rgb(146, 254, 157) 100%);
 }
-.pokedex .card .rock {
-  background-color: #d5d5d4;
-  outline-color: #d5d5d4;
+.pokedex .card-body .psychic {
+  background: linear-gradient(90deg, rgb(248, 255, 0) 0%, rgb(58, 213, 159) 100%);
 }
-.pokedex .card .steel {
-  background-color: #f4f4f4;
-  outline-color: #f4f4f4;
+.pokedex .card-body .rock {
+  background: linear-gradient(90deg, rgb(253, 187, 45) 0%, rgb(58, 28, 113) 100%);
+}
+.pokedex .card-body .steel {
+  background: linear-gradient(90deg, rgb(75, 108, 183) 0%, rgb(24, 40, 72) 100%);
+}
+.pokedex .card-body .water {
+  background: linear-gradient(90deg, rgb(0, 210, 255) 0%, rgb(58, 71, 213) 100%);
 }
 .pokedex .card-footer {
   margin-top: auto;
@@ -163,6 +161,8 @@
 html {
   background-color: rgb(241, 245, 249);
   scroll-behavior: smooth;
+  -ms-scroll-snap-type: both proximity;
+      scroll-snap-type: both proximity;
 }
 
 a {
@@ -195,7 +195,7 @@ ul {
 }
 
 .container {
-  padding: 1rem;
+  padding: 1rem 4rem;
   width: 100%;
 }
 @media (min-width: 576px) {
