@@ -17,9 +17,9 @@ const generateHTML = pokemons => pokemons.reduce((accumulator, { id, name, sprit
         <span class='pokemon-id'>#${ id }</span>
         <h2 class='pokemon-name'>${ name }</h2>
       </div>
-      <div class='card-content pokemon ${ pokemonTypes[0] }'>
-        <div class='card-body'>
-          <img class='pokemon-img' src='${ pokemonSprites.front_default }' alt='${ name }' width='192px' height='192px'>
+      <div class='card-body'>
+        <div class='card-content pokemon ${ pokemonTypes[0] }'>
+          <img class='pokemon-img' src='${ pokemonSprites.front_default }' alt='${ name }' width='100%' height='192px'>
         </div>
       </div>
       <div class='card-footer'>
